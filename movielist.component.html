@@ -1,0 +1,17 @@
+<fieldset><p id="a">The Movie List Data</fieldset>
+<p id="a">Search Ur Favourite:&nbsp;<input type="search" placeholder="Search" [(ngModel)]="search">&nbsp;
+<button (click)="add()">Add Movie</button></p>
+<hr color="red">
+<table border="1" >
+   <tr>
+       <th>MovieName</th>
+       <th>Language</th>
+       <th>Genre</th>
+   </tr>
+   <tr *ngFor='let a of User | filter:search,let i=index'>
+                                                    
+       <td>{{a.MovieName}}</td>
+       <td>{{a.Language}}</td>
+       <td>{{a.Genre}}</td>
+   </tr>
+</table>
